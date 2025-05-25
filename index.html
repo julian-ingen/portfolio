@@ -2,185 +2,100 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio - Julián Ingentron</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portafolio de Julian, desarrollador web." />
+  <title>Portafolio de Julian</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-    * {
-      box-sizing: border-box;
-    }
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
-      background: #f5f7fa;
-      color: #222;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
     }
     header {
-      background: #2c3e50;
-      color: #ecf0f1;
-      padding: 2rem 1rem;
+      background-color: #1e1e1e;
+      color: white;
+      padding: 1rem;
       text-align: center;
-      box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
-    }
-    header h1 {
-      margin: 0;
-      font-weight: 700;
-      font-size: 2.5rem;
-      letter-spacing: 1px;
-    }
-    header p {
-      margin-top: 0.5rem;
-      font-size: 1.1rem;
-      color: #bdc3c7;
-    }
-    nav {
-      margin-top: 1rem;
     }
     nav a {
-      color: #ecf0f1;
+      margin: 0 1rem;
+      color: white;
       text-decoration: none;
-      margin: 0 0.75rem;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #1abc9c;
-    }
-    main {
-      flex-grow: 1;
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
     }
     section {
-      margin-bottom: 3rem;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
     }
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      border-bottom: 3px solid #1abc9c;
-      display: inline-block;
-      padding-bottom: 0.3rem;
-      color: #2c3e50;
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
     }
-    .project-card {
+    .card {
       background: white;
-      border-radius: 8px;
-      padding: 1.5rem;
-      box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
     }
-    .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 15px rgb(0 0 0 / 0.15);
+    .card img {
+      max-width: 100%;
+      border-radius: 10px;
     }
-    .project-title {
-      margin-top: 0;
-      font-size: 1.5rem;
-      color: #34495e;
-    }
-    .project-desc {
-      margin: 0.75rem 0 1.25rem;
-      color: #555;
-    }
-    .tech-list {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-bottom: 1rem;
-    }
-    .tech-list li {
-      background: #1abc9c;
-      color: white;
-      padding: 0.3rem 0.75rem;
-      border-radius: 4px;
-      font-size: 0.85rem;
-      font-weight: 600;
-    }
-    .btn-demo {
-      background: #1abc9c;
-      color: white;
-      border: none;
-      padding: 0.6rem 1.2rem;
-      border-radius: 5px;
-      font-weight: 600;
-      font-size: 1rem;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      transition: background-color 0.3s ease;
-    }
-    .btn-demo:hover {
-      background: #16a085;
+    .card h3 {
+      margin-top: 1rem;
     }
     footer {
       text-align: center;
       padding: 1rem;
-      background: #2c3e50;
-      color: #ecf0f1;
-      font-size: 0.9rem;
-    }
-    .social-links a {
-      color: #1abc9c;
-      margin: 0 0.5rem;
-      font-weight: 700;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    .social-links a:hover {
-      color: #16a085;
+      background: #1e1e1e;
+      color: white;
     }
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      section h2 {
-        font-size: 1.5rem;
-      }
-      .btn-demo {
-        font-size: 0.9rem;
+      header, footer {
+        text-align: center;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Julián Ingentron</h1>
-    <p>Desarrollador Backend / Full-stack Junior</p>
-    <nav class="social-links">
-      <a href="https://github.com/julian-ingen" target="_blank" rel="noopener noreferrer">GitHub</a> |
-      <a href="https://www.linkedin.com/in/julian-ingentron-52b055311" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <h1>Julian - Desarrollador Web</h1>
+    <nav>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
     </nav>
   </header>
-  <main>
-    <section id="proyectos">
-      <h2>Proyectos</h2>
-      <article class="project-card">
-        <h3 class="project-title">Petshop - Gestión de mascotas</h3>
-        <p class="project-desc">
-          Proyecto web para la gestión de mascotas usando PostgreSQL y Django. Permite registrar, listar y administrar mascotas en una tienda.
-        </p>
-        <ul class="tech-list">
-          <li>Python</li>
-          <li>Django</li>
-          <li>PostgreSQL</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Bootstrap</li>
-        </ul>
-        <a class="btn-demo" href="https://julianingen.pythonanywhere.com/pet" target="_blank" rel="noopener noreferrer">Ver demo</a>
-      </article>
-    </section>
-  </main>
+
+  <section id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>Soy un desarrollador web en formación, apasionado por la programación y el desarrollo de aplicaciones útiles. Actualmente estudio en Teclab la Tecnicatura en Programación.</p>
+  </section>
+
+  <section id="proyectos">
+    <h2>Proyectos</h2>
+    <div class="projects">
+      <div class="card">
+        <img src="img/pet_project.png" alt="Proyecto de adopción de mascotas" />
+        <h3>Sistema de adopción de mascotas</h3>
+        <p>Una aplicación web para registrar y publicar mascotas en adopción. Hecha con Python y Django.</p>
+        <a href="https://julianingen.pythonanywhere.com/pet" target="_blank">Ver proyecto</a>
+      </div>
+      <!-- Puedes duplicar esta tarjeta para agregar más proyectos -->
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Podés contactarme por correo a: <a href="mailto:julian.dev@mail.com">julian.dev@mail.com</a></p>
+  </section>
+
   <footer>
-    &copy; 2025 Julián Ingentron. Todos los derechos reservados.
+    <p>&copy; 2025 Julian - Todos los derechos reservados</p>
   </footer>
 </body>
 </html>
